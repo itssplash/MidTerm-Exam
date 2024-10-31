@@ -56,4 +56,6 @@ app.delete('/students/:id', (req, res) => {
     res.json(deletedStudent);
 });
 
-app.listen(3000, () => console.log('REST Example is running on 3000'));
+const port = process.env.PORT || 3000;
+app.listen(port, () => console.log(`REST Example is running on ${port}`));
+
